@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage ('git checkout') {
+            steps {
+                git branch: 'main', credentialsId: '3372569d-d981-4351-bae1-8510995e8cf9', url: 'https://github.com/anudeep8688/git-practice.git'
+            }
+        }
+    }
+}
